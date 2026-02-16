@@ -95,6 +95,7 @@ document.getElementById("addButton").addEventListener("click", function() {
         //création nouvel avis
         const avis = document.createElement("p");
         avis.textContent = value;
+        avis.classList.add("avis");
 
         //ajout de l'avis à la suite du formulaire
         document.getElementById("listAvis").appendChild(avis);
