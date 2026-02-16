@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <h1>Exercice 0</h1>
+
+        <script type="text/javascript">
+
+        /* Section 1 */   
+
+        var name = "Joe";                               // Déclaration d'une variable nommée name qui prend pour valeur  le mot "Joe"
+        var city = 'London';                            // Déclaration d'une variable nommée city qui prend pour valeur  le mot "London"
+        var age = 32;                                   // Déclaration d'une variable nommée age qui prend pour valeur l'entier 32 
+        var isRed = false;                               // Déclaration d'une variable nommée isRed qui prend pour valeur Booleen vrai 
+        var isOld = age > 80;                           // Déclaration d'une variable nommée isOld qui prend pour valeur age suppérieur à 80
+
+        var previousJobs = ['lawyer', 'developper', 'Professionnal climber'];       //Tableau nommée previousJobs avec comme données stockées "lawer, "developper", "Professionnal climber"   
+
+        function info(height, weight) {                    //Fonction nommée info avec comme paremètre height et weight
+            if (height > 180) {                            //Condition si heigth suppérieur à 180 alors afficher le texte "Vous êtes grand"
+                console.log('Vous êtes grand');
+            }
+            if (weight < 0) {                                 //Condition si weigth infférieur à 0 
+                console.log('oups, there is a problem');       //alors afficher le texte "oups, there is a problem"
+            } else if ( weight < 15) {                            //sinon si weight infférieur à 15 
+                console.log('Are you that slim ?')                   //alors afficher le texte "Are you that slim ?"
+            } else {                                                    //sinon
+                console.log('Good !')                                     //afficher le texte "Good ! "
+            }
+        }
+
+        info(165, 45);                                      //Fonction nommée info avec comme paramètre 165 et 45
+
+        var myHeight = 175;                                 // Déclaration d'une variable nommée myHeight qui prend pour valeur l'entier 175
+        var myWeight = 86;                                  // Déclaration d'une variable nommée myWeight qui prend pour valeur l'entier 86
+
+        info(myHeight, myWeight);                           //Fonction nommée info avec comme paramètre myHeight et myWeight
+
+        info(myHeight + 15, myWeight - 100);                //Fonction nommée info avec comme paramètre myHeight +15 et myWeight -100
+
+        function toUpper(variable) {                       //Fonction nommée toUpper avec comme paramètre 
+            return variable.toUpperCase();
+        }
+
+        var upperName = toUpper(name);                     //
+
+        for (i = 0; i < 3; i = i + 1) {                    //Une boucle for qui dit en commençant par 0, tanqt que c'est strictement inférieur à 3, imcrémenter de +1  
+            console.log(previousJobs[i]);                   // afficher le tableau previousJobs
+        }
+
+        /* Section 2: */
+
+        // afficher la ville dans laquele Joe vit.     
+         console.log('London');
+        // afficher si Joe est roux ou pas.
+        if ( isRed=true){
+         console.log('Joe est roux');
+        }else{
+        console.log('Joe nest pas roux');
+        }
+        /* Section 3 */
+
+        console.log(myVariable);    //La console m'indique que myVaribale n'est pas defini
+
+        </script>
+
+    </body>
+</html>
