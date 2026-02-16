@@ -85,6 +85,23 @@ window.onclick = function(event) {
 
 //FORMULAIRE DYNAMIQUE
 
+document.getElementById("addButton").addEventListener("click", function() {
+
+    const input = document.getElementById("field");
+    const value = input.value.trim();
+
+    if (value !==""){
+
+        //création nouvel avis
+        const avis = document.createElement("p");
+        avis.textContent = value;
+
+        //ajout de l'avis à la suite du formulaire
+        document.getElementById("listAvis").appendChild(avis);
+
+
+    }
+})
 
 
 

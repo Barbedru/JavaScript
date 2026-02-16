@@ -24,30 +24,14 @@
     <nav>
 
 
-        <a class="lien_nav" href="accueil.html">
-            <div class="accueil">
-                Home
-            </div>
-        </a>
 
-        <a class="lien_nav" href="hobbies.html">
-            <div class="formule">
-                Formule
-            </div>
-        </a>
-
-        <a class="lien_nav" href="contact.html">
-            <div class="contact">
-                Contact
-            </div>
-        </a>
 
     <div class="dropdown">
         <button onclick="dropdown()" class="dropbtn">MENU</button>
         <div id="dropdownMenu" class="dropdown-content">
-            <p> accueil </p>
-            <p> hobbies </p>
-            <p> contact </p>
+            <p> Accueil </p>
+            <p> Hobbies </p>
+            <p> Contact </p>
         </div>
     </div>
 
@@ -83,52 +67,78 @@
         </div>
 
 
+
         <div class="titre-article">
 
             <h2> Type de photo </h2>
 
         </div>
 
+
     <div id="feed-container">
+
+        <div class="formulaire">
+            <form id="dynamicForm">
+                <div class="form-group">
+                    <label for="field">Laisser un avis</label>
+                    <input type="text" id="field" name="field" placeholder="...">
+                </div>
+                <div class="form-group">
+                    <button type="button" id="addButton"> Publier</button>
+                </div>
+            </form>
+        </div>
+
+
+
+        <div id="listAvis">
+
+        </div>
+
+
+        <div id="cards">
+
+        </div>
+
 
     </div>
 
 
-        <div class="photos">
+<!--        <div class="photos">-->
 
-            <div class="photo_1">
-                <img src="media/portrait.png" alt="portrait">
+<!--            <div class="photo">-->
+<!--                <img src="media/portrait.png" alt="portrait">-->
 
-                <p class="titre_photo">Portrait</p>
-                <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, placeat, illum
-                    nisi veritatis odit deserunt sed quaerat architecto illo ipsa earum velit temporibus quis numquam
-                    dolore incidunt assumenda alias? Excepturi!</p>
+<!--                <h3 class="titre_photo">Portrait</h3>-->
+<!--                <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, placeat, illum-->
+<!--                    nisi veritatis odit deserunt sed quaerat architecto illo ipsa earum velit temporibus quis numquam-->
+<!--                    dolore incidunt assumenda alias? Excepturi!</p>-->
 
-            </div>
-
-
-
-            <div class="photo_2">
-                <img src="media/paysage.png" alt="paysage">
-                <p class="titre_photo">Paysage</p>
-                <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, placeat, illum
-                    nisi veritatis odit deserunt sed quaerat architecto illo ipsa earum velit temporibus quis numquam
-                    dolore incidunt assumenda alias? Excepturi!</p>
-
-            </div>
+<!--            </div>-->
 
 
-            <div class="photo_3">
-                <img src="media/poire.png" alt="poire">
-                <p class="titre_photo">Artistique</p>
-                <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, placeat, illum
-                    nisi veritatis odit deserunt sed quaerat architecto illo ipsa earum velit temporibus quis numquam
-                    dolore incidunt assumenda alias? Excepturi! d quaerat architecto illo ipsa earum velit temporibus
-                    quis numquam dolore incidunt assumenda alias? Excepturi!</p>
 
-            </div>
+<!--            <div class="photo">-->
+<!--                <img src="media/paysage.png" alt="paysage">-->
+<!--                <h3 class="titre_photo">Paysage</h3>-->
+<!--                <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, placeat, illum-->
+<!--                    nisi veritatis odit deserunt sed quaerat architecto illo ipsa earum velit temporibus quis numquam-->
+<!--                    dolore incidunt assumenda alias? Excepturi!</p>-->
 
-        </div>
+<!--            </div>-->
+
+
+<!--            <div class="photo">-->
+<!--                <img src="media/poire.png" alt="poire">-->
+<!--                <h3 class="titre_photo">Artistique</h3>-->
+<!--                <p class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, placeat, illum-->
+<!--                    nisi veritatis odit deserunt sed quaerat architecto illo ipsa earum velit temporibus quis numquam-->
+<!--                    dolore incidunt assumenda alias? Excepturi! d quaerat architecto illo ipsa earum velit temporibus-->
+<!--                    quis numquam dolore incidunt assumenda alias? Excepturi!</p>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
 
 
     </main>
