@@ -1,39 +1,40 @@
 // you can write js here
 console.log('exo-2');
 
-const myDate = new Date();
-let jourSemaine = ("Nous sommes un jour de la semaine");
-let jourWeekend = ("Nous somme un jour du weekend");
-
-let jourActuel = myDate.getDay();
-let heureActuel = myDate.getHours();
-
-let isTesting = true 
-let demandeJour = prompt("Quel jour");
-let demandeHeure = prompt("Quel heure");
- 
+let isTesting = true;
+let jourActuel;
+let heureActuelle;
+let jourSemaine = "Nous sommes un jour de semaine";
+let jourWeekend = "Nous sommes en week-end";
 
 
-console.log(jourActuel);
+if (isTesting) {
+  jourActuel = Number(prompt("Jour (0 => dimanche / 1 => lundi ect)"));
+  heureActuelle = Number(prompt("Heure (entre 0 et 23)"));
+} else {
+  const myDate = new Date();
+  jourActuel = myDate.getDay();    
+  heureActuelle = myDate.getHours();
 
- if (jourActuel < 6 ){
-    console.log(jourSemaine);
- }else{
-    console.log(jourWeekend);
- }
-
-
- if(heureActuel > 17 && jourActuel == 5){
-    console.log(jourWeekend);
- }else{
-    console.log(jourSemaine);
- }
+  console.log("Date complète :", myDate);
+}
+console.log("Jour actuel :", jourActuel);
+console.log("Heure actuelle :", heureActuelle);
 
 
+if (jourActuel === 5 && heureActuelle >= 17) {
+  console.log("Vendredi après 17h :", messageduweekend);
+}
 
- if (jourActuel == 0 && heureActuel < 9){
-    console.log(jourWeekend);
- }else{
-    console.log(jourSemaine);
- }
+else if (jourActuel === 1 && heureActuelle < 9) {
+  console.log("Lundi avant 9h :", messageduweekend);
+}
+
+else if (jourActuel === 0 || jourActuel === 6) {
+  console.log(messageduweekend);
+}
+
+else {
+  console.log(messagedelasemaine);
+}
 

@@ -16,6 +16,14 @@ const Photos = [
 ];
 
 
+function dropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+
+
+
+
 
 
 
