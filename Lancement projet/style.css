@@ -34,7 +34,7 @@ nav{
     background-color: #3498DB;
     color: white;
     padding: 16px;
-    font-size: 16px;
+    font-size: 27px;
     border: none;
     cursor: pointer;
 }
@@ -69,6 +69,58 @@ nav{
 
 .show {display: block;}
 
+/*---------------------------------------*/
+
+
+
+
+/*FORMULAIRE DYNAMIQUE*/
+
+.formulaire {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
 
 
 
@@ -85,7 +137,7 @@ nav{
 }
 
 .titre-article{
-    margin-top: 30px;
+    margin-top: 10px;
     border-top: 3px #000000 solid;
     border-bottom: 3px #000000 solid;
     border-left: 3px #000000 solid;
@@ -93,19 +145,22 @@ nav{
     text-align: center;
 }
 
+.description{
+    padding-top: 15px;
+    font-size: 25px;
+
+}
 
 .photos{
    display: flex;
    flex-direction: column;
    margin-top: 50px;
    margin-left: 50px;
-    
+
 }
 
-.photo_1,
-.photo_2,
-.photo_3 {
-    width: 97%;
+.photo{
+    width: 50%;
     margin-top: 30px;
     border-top: 3px #000000 solid;
     border-bottom: 3px #000000 solid;
@@ -113,13 +168,15 @@ nav{
     border-right: 3px #000000 solid;
     display: flex;
     flex-wrap: wrap;
+
   
 }
 
 
 .titre_photo{
-    margin-left: 10px;
-   font-size: 35px;
+    margin-top: 10px;
+    font-size: 35px;
+
 }
 
 
