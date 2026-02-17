@@ -1,3 +1,5 @@
+
+
 const article = [
     {   id : 1,
         image:"media/portrait.png",
@@ -18,7 +20,10 @@ const article = [
     }
 ];
 
+
+
 function createdCard(article) {
+
     const cards = document.getElementById("cards");
     cards.classList.add("photos");
 
@@ -62,7 +67,6 @@ async function fetchArticles() {
 
 
 
-
 //DROPDOWN
 function dropdown() {
     document.getElementById("dropdownMenu").classList.toggle("show");
@@ -83,8 +87,8 @@ window.onclick = function(event) {
 }
 
 
-//FORMULAIRE DYNAMIQUE
 
+//FORMULAIRE DYNAMIQUE
 document.getElementById("addButton").addEventListener("click", function() {
 
     const input = document.getElementById("field");
@@ -99,10 +103,99 @@ document.getElementById("addButton").addEventListener("click", function() {
 
         //ajout de l'avis à la suite du formulaire
         document.getElementById("listAvis").appendChild(avis);
-
-
     }
 })
+
+
+
+
+//Création de la Galerie
+
+const galleries = [
+    {   image : "media/1.jpg"},
+    {   image : "media/2.jpg"},
+    {   image : "media/3.jpg"},
+    {   image : "media/4.jpg"},
+    {   image : "media/5.jpg"},
+    {   image : "media/6.jpg"},
+    {   image : "media/7.jpg"},
+    {   image : "media/8.jpg"},
+    {   image : "media/9.jpg"},
+    {   image : "media/166.jpg"},
+    {   image : "media/167.jpg"},
+    {   image : "media/198.jpg"},
+    {   image : "media/168.jpg"},
+    {   image : "media/169.jpg"},
+    {   image : "media/199.jpg"},
+    {   image : "media/170.jpg"},
+    {   image : "media/171.jpg"},
+    {   image : "media/200.jpg"},
+    {   image : "media/182.jpg"},
+    {   image : "media/183.jpg"},
+    {   image : "media/184.jpg"},
+]
+function createdGrid(galleries) {
+
+    //récupère dans l'HTML l'élément id="grid"
+    const grid = document.getElementById("grid"); //conteneur principal
+
+    //crée dynamiquement une nouvelle balise <div> en Js
+    const gridContainer = document.createElement("div"); //conteneur pour les images
+    gridContainer.classList.add("grid","mosaic"); //Ajoute le css
+
+    //Boucle images
+    galleries.forEach(gallerie => {
+        const img = document.createElement("img"); //Crée une balise <img> pour chaque image
+        img.src = gallerie.image;                                            // Source de l'image
+        gridContainer.appendChild(img);                                      //Ajout de l'image dans la div gridContainer
+    });
+
+    //Ajouter au HTML
+    grid.appendChild(gridContainer);  //Ajout de gridContainer à l’intérieur de l’élément HTML
+
+    return gridContainer;  //stock la variable
+}
+//Appel fonction
+
+const galleryContainer = createdGrid(galleries); //stock la variable galleryContainer
+
+
+
+
+
+
+//Bouttons de changement
+
+const mosaicBtn = document.getElementById("mosaicBtn");   // Récup le bouton mosaic dans l'html
+const columnBtn = document.getElementById("columnBtn");   // ** column
+
+mosaicBtn.addEventListener("click", function()  {    //ajout d'événement, quand on click ça execute la fonction
+    galleryContainer.classList.remove("column");         // supprime la class column si présente
+    galleryContainer.classList.add("mosaic"); // ajoute la class mosaic
+});
+
+columnBtn.addEventListener("click", () => {  //ajout d'événement, quand on click ça execute la fonction
+    galleryContainer.classList.remove("mosaic"); // supprime la class mosaic si présente
+    galleryContainer.classList.add("column"); // ajoute la class column
+});
+
+
+
+
+
+
+
+//Ajout d'une image
+
+const addImgBtn = document.getElementById("addImgBtn"); //Récup le bouton + dans l'html
+addImgBtn.addEventListener("click", function() {         //ajout d'événement, quand on click ça execute la fonction
+    const newImg = document.createElement("img");  //crée une nouvelle image
+    newImg.src = "http://picsum.photos/300";                                //Source de l'image
+    galleryContainer.appendChild(newImg);                                  //Ajout de l'image galleryContainer
+
+
+})
+
 
 
 

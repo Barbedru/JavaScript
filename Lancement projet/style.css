@@ -189,6 +189,38 @@ button:hover {
 
 
 
+.g_button,
+.addImg{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    gap: 10px;
+}
+
+
+
+.mosaic {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+    gap: 10px;
+}
+
+
+.column {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+
+}
+
+
 .footer{
     margin-top: 50px;
     position: relative;
