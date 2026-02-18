@@ -1,25 +1,25 @@
-
-
 const article = [
-    {   id : 1,
-        image:"media/portrait.png",
+    {
+        id: 1,
+        image: "media/portrait.png",
         titre: "Photo Portrait",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vero, consectetur non a fugiat"
     },
 
-    {   id : 2,
+    {
+        id: 2,
         image: "media/paysage.png",
         titre: "Photo Paysage",
-        description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vero, consectetur non a fugiat"
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vero, consectetur non a fugiat"
     },
 
-    {   id : 3,
+    {
+        id: 3,
         image: "media/poire.png",
         titre: "Photo Artistique",
-        description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vero, consectetur non a fugiat"
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vero, consectetur non a fugiat"
     }
 ];
-
 
 
 function createdCard(article) {
@@ -39,7 +39,7 @@ function createdCard(article) {
     h3.classList = "titre_photo";
 
     const img = document.createElement("img");
-    img.src=article.image;
+    img.src = article.image;
     img.textContent = article.image;
     card.appendChild(img);
     img.classList = "photos";
@@ -54,7 +54,9 @@ function createdCard(article) {
 
 window.addEventListener('load', function () {
     const container = document.getElementById("feed-container");
-    article.forEach((article) => { createdCard(article, container) });
+    article.forEach((article) => {
+        createdCard(article, container)
+    });
 });
 
 async function fetchArticles() {
@@ -66,14 +68,13 @@ async function fetchArticles() {
 }
 
 
-
 //DROPDOWN
 function dropdown() {
     document.getElementById("dropdownMenu").classList.toggle("show");
 }
 
 //ferme le dropdown quand on click en dehors de celui-ci
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -87,19 +88,28 @@ window.onclick = function(event) {
 }
 
 
-
 //FORMULAIRE DYNAMIQUE
-document.getElementById("addButton").addEventListener("click", function() {
+document.getElementById("addButton").addEventListener("click", function () {
 
     const input = document.getElementById("field");
     const value = input.value.trim();
 
-    if (value !==""){
+    if (value !== "") {
 
         //création nouvel avis
         const avis = document.createElement("p");
         avis.textContent = value;
         avis.classList.add("avis");
+
+        //bouton supprimer
+        const btnsup = document.createElement("button");
+        btnsup.textContent = "Supprimer";
+        btnsup.addEventListener("click", function () {
+            avis.remove();
+        });
+
+        //ajout bouton à avis
+        avis.appendChild(btnsup);
 
         //ajout de l'avis à la suite du formulaire
         document.getElementById("listAvis").appendChild(avis);
@@ -107,33 +117,32 @@ document.getElementById("addButton").addEventListener("click", function() {
 })
 
 
-
-
 //Création de la Galerie
 
 const galleries = [
-    {   image : "media/1.jpg"},
-    {   image : "media/2.jpg"},
-    {   image : "media/3.jpg"},
-    {   image : "media/4.jpg"},
-    {   image : "media/5.jpg"},
-    {   image : "media/6.jpg"},
-    {   image : "media/7.jpg"},
-    {   image : "media/8.jpg"},
-    {   image : "media/9.jpg"},
-    {   image : "media/166.jpg"},
-    {   image : "media/167.jpg"},
-    {   image : "media/198.jpg"},
-    {   image : "media/168.jpg"},
-    {   image : "media/169.jpg"},
-    {   image : "media/199.jpg"},
-    {   image : "media/170.jpg"},
-    {   image : "media/171.jpg"},
-    {   image : "media/200.jpg"},
-    {   image : "media/182.jpg"},
-    {   image : "media/183.jpg"},
-    {   image : "media/184.jpg"},
+    {image: "media/1.jpg"},
+    {image: "media/2.jpg"},
+    {image: "media/3.jpg"},
+    {image: "media/4.jpg"},
+    {image: "media/5.jpg"},
+    {image: "media/6.jpg"},
+    {image: "media/7.jpg"},
+    {image: "media/8.jpg"},
+    {image: "media/9.jpg"},
+    {image: "media/166.jpg"},
+    {image: "media/167.jpg"},
+    {image: "media/198.jpg"},
+    {image: "media/168.jpg"},
+    {image: "media/169.jpg"},
+    {image: "media/199.jpg"},
+    {image: "media/170.jpg"},
+    {image: "media/171.jpg"},
+    {image: "media/200.jpg"},
+    {image: "media/182.jpg"},
+    {image: "media/183.jpg"},
+    {image: "media/184.jpg"},
 ]
+
 function createdGrid(galleries) {
 
     //récupère dans l'HTML l'élément id="grid"
@@ -141,7 +150,7 @@ function createdGrid(galleries) {
 
     //crée dynamiquement une nouvelle balise <div> en Js
     const gridContainer = document.createElement("div"); //conteneur pour les images
-    gridContainer.classList.add("grid","mosaic"); //Ajoute le css
+    gridContainer.classList.add("grid", "mosaic"); //Ajoute le css
 
     //Boucle images
     galleries.forEach(gallerie => {
@@ -155,23 +164,19 @@ function createdGrid(galleries) {
 
     return gridContainer;  //stock la variable
 }
-//Appel fonction
 
+//Appel fonction
 const galleryContainer = createdGrid(galleries); //stock la variable galleryContainer
 
 
-
-
-
-
-//Bouttons de changement
+//Boutons de changement
 
 const mosaicBtn = document.getElementById("mosaicBtn");   // Récup le bouton mosaic dans l'html
 const columnBtn = document.getElementById("columnBtn");   // ** column
 
-mosaicBtn.addEventListener("click", function()  {    //ajout d'événement, quand on click ça execute la fonction
+mosaicBtn.addEventListener("click", function () {    //ajout d'événement, quand on click ça execute la fonction
+    galleryContainer.classList.add("mosaic");                       // ajoute la class mosaic
     galleryContainer.classList.remove("column");         // supprime la class column si présente
-    galleryContainer.classList.add("mosaic"); // ajoute la class mosaic
 });
 
 columnBtn.addEventListener("click", () => {  //ajout d'événement, quand on click ça execute la fonction
@@ -180,21 +185,33 @@ columnBtn.addEventListener("click", () => {  //ajout d'événement, quand on cli
 });
 
 
-
-
-
-
-
 //Ajout d'une image
 
-const addImgBtn = document.getElementById("addImgBtn"); //Récup le bouton + dans l'html
-addImgBtn.addEventListener("click", function() {         //ajout d'événement, quand on click ça execute la fonction
-    const newImg = document.createElement("img");  //crée une nouvelle image
-    newImg.src = "http://picsum.photos/300";                                //Source de l'image
-    galleryContainer.appendChild(newImg);                                  //Ajout de l'image galleryContainer
+
+addImgBtn.addEventListener("click", function () {
+
+    const newNew = document.createElement("div");
+    const newImg = document.createElement("img");
+    newImg.src = "https://picsum.photos/200/300?grayscale";
 
 
-})
+    const btnsup = document.createElement("button");
+    btnsup.textContent = "Supprimer Image";
+
+
+    btnsup.addEventListener("click", function () {
+        newNew.remove();
+    });
+
+    newNew.appendChild(newImg);
+    newNew.appendChild(btnsup);
+
+    galleryContainer.appendChild(newNew);
+});
+
+
+
+
 
 
 

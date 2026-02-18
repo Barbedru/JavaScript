@@ -9,23 +9,23 @@ html {
 
 .logo {
     width: 100px;
-    position:sticky;
+    position: sticky;
 }
 
-nav{
+nav {
     margin-top: 10px;
     height: 50px;
     background-color: rgb(77, 136, 82);
     display: flex;
     justify-content: space-evenly;
-      
+
 }
 
 .accueil,
 .formule,
-.contact{
+.contact {
     font-size: 35px;
- 
+
 }
 
 /*DropDown*/
@@ -54,7 +54,7 @@ nav{
     background-color: #f1f1f1;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -65,13 +65,15 @@ nav{
     display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+    background-color: #ddd;
+}
 
-.show {display: block;}
+.show {
+    display: block;
+}
 
 /*---------------------------------------*/
-
-
 
 
 /*FORMULAIRE DYNAMIQUE*/
@@ -82,7 +84,7 @@ nav{
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -115,18 +117,21 @@ button {
     font-size: 16px;
 }
 
+
+
 button:hover {
     background-color: #45a049;
 }
 
-.avis{
+.avis {
     max-width: 600px;
     margin: 0 auto 30px;
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 
 
@@ -141,10 +146,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
-   
+
 }
 
-.titre-article{
+.titre-article {
     margin-top: 10px;
     border-top: 3px #000000 solid;
     border-bottom: 3px #000000 solid;
@@ -153,21 +158,26 @@ button:hover {
     text-align: center;
 }
 
-.description{
+.description {
     padding-top: 15px;
     font-size: 25px;
 
 }
 
-.photos{
-   display: flex;
-   flex-direction: column;
-   margin-top: 50px;
-   margin-left: 50px;
+.photos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 50px;
 
 }
 
-.photo{
+
+
+
+
+.photo {
     width: 50%;
     margin-top: 30px;
     border-top: 3px #000000 solid;
@@ -177,20 +187,19 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
 
-  
+
 }
 
 
-.titre_photo{
+.titre_photo {
     margin-top: 10px;
     font-size: 35px;
 
 }
 
 
-
 .g_button,
-.addImg{
+.addImg {
     display: flex;
     flex-direction: row;
 
@@ -203,7 +212,6 @@ button:hover {
     grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
     gap: 10px;
 }
-
 
 
 .mosaic {
@@ -221,7 +229,7 @@ button:hover {
 }
 
 
-.footer{
+.footer {
     margin-top: 50px;
     position: relative;
     background-color: rgb(77, 136, 82);
